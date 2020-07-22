@@ -1,3 +1,4 @@
+// import React, { useState } from 'react';
 import React from 'react';
 import hoodiereaper2 from '../images/hoodiereaper2.png';
 import hoodielove2 from '../images/hoodielove2.png';
@@ -39,6 +40,7 @@ const Home = () => {
           Add to Cart
         </a>
       </div>
+      <h1>Current Numbers in Cart {}</h1>
     </div>
   );
 };
