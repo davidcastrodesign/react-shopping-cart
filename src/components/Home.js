@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import hoodiereaper2 from '../images/hoodiereaper2.png';
-import hoodielove2 from '../images/hoodielove2.png';
-import hoodietears2 from '../images/hoodietears2.png';
-import hoodierage2 from '../images/hoodierage2.png';
+import ReaperHoodie from '../images/ReaperHoodie.png';
+import LoveHoodie from '../images/LoveHoodie.png';
+import TearsHoodie from '../images/TearsHoodie.png';
+import RageHoodie from '../images/RageHoodie.png';
 import { connect } from 'react-redux';
 import { addBasket } from '../actions/addAction';
 
@@ -11,7 +11,7 @@ const Home = (props) => {
   return (
     <div className='container'>
       <div className='image'>
-        <img src={hoodiereaper2} alt='Reaper Hoodie' />
+        <img src={ReaperHoodie} alt='ReaperHoodie' />
         <h3>Reaper Hoodie</h3>
         <h3>$45.00</h3>
         <a
@@ -23,7 +23,7 @@ const Home = (props) => {
         </a>
       </div>
       <div className='image'>
-        <img src={hoodielove2} alt='Love Hoodie' />
+        <img src={LoveHoodie} alt='LoveHoodie ' />
         <h3>Love Hoodie</h3>
         <h3>$45.00</h3>
         <a
@@ -35,7 +35,7 @@ const Home = (props) => {
         </a>
       </div>
       <div className='image'>
-        <img src={hoodietears2} alt='Tears Hoodie' />
+        <img src={TearsHoodie} alt='TearsHoodie' />
         <h3>Tears Hoodie</h3>
         <h3>$45.00</h3>
         <a
@@ -47,7 +47,7 @@ const Home = (props) => {
         </a>
       </div>
       <div className='image'>
-        <img src={hoodierage2} alt='Rage Hoodie' />
+        <img src={RageHoodie} alt='RageHoodie' />
         <h3>Rage Hoodie</h3>
         <h3>$45.00</h3>
         <a
