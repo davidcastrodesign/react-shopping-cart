@@ -16,10 +16,6 @@ header {
   position: relative;
 }
 
-img {
-  opacity: 0.5;
-}
-
 .overlay {
   position: absolute;
   z-index: 1;

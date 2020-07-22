@@ -2,6 +2,33 @@ import { ADD_PRODUCT_BASKET, GET_NUMBERS_BASKET } from '../actions/types';
 
 const intialState = {
   basketNumbers: 0,
+  cartCost: 0,
+  products: {
+    ReaperHoodie: {
+      name: 'Reaper Hoodie',
+      price: 45.0,
+      numbers: 0,
+      inCart: false,
+    },
+    LoveHoodie: {
+      name: 'Love Hoodie',
+      price: 45.0,
+      numbers: 0,
+      inCart: false,
+    },
+    TearsHoodie: {
+      name: 'Tears Hoodie',
+      price: 45.0,
+      numbers: 0,
+      inCart: false,
+    },
+    RageHoodie: {
+      name: 'Rage Hoodie',
+      price: 45.0,
+      numbers: 0,
+      inCart: false,
+    },
+  },
 };
 
 export default (state = intialState, action) => {
