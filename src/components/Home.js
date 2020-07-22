@@ -4,8 +4,11 @@ import hoodiereaper2 from '../images/hoodiereaper2.png';
 import hoodielove2 from '../images/hoodielove2.png';
 import hoodietears2 from '../images/hoodietears2.png';
 import hoodierage2 from '../images/hoodierage2.png';
+import { connect } from 'react-redux';
+import { addBasket } from '../actions/addAction';
 
-const Home = () => {
+const Home = (props) => {
+  console.log(props);
   return (
     <div className='container'>
       <div className='image'>
@@ -45,4 +48,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect(null, { addBasket })(Home);
