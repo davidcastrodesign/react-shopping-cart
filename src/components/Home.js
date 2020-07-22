@@ -15,7 +15,7 @@ const Home = (props) => {
         <img src={hoodiereaper2} alt='Reaper Hoodie' />
         <h3>Reaper Hoodie</h3>
         <h3>$45.00</h3>
-        <a className='addToCart cart1' href='#'>
+        <a onClick={props.addBasket} className='addToCart cart1' href='#'>
           Add to Cart
         </a>
       </div>
@@ -23,7 +23,7 @@ const Home = (props) => {
         <img src={hoodielove2} alt='Love Hoodie' />
         <h3>Love Hoodie</h3>
         <h3>$45.00</h3>
-        <a className='addToCart cart2' href='#'>
+        <a onClick={props.addBasket} className='addToCart cart2' href='#'>
           Add to Cart
         </a>
       </div>
@@ -31,7 +31,7 @@ const Home = (props) => {
         <img src={hoodietears2} alt='Tears Hoodie' />
         <h3>Tears Hoodie</h3>
         <h3>$45.00</h3>
-        <a className='addToCart cart3' href='#'>
+        <a onClick={props.addBasket} className='addToCart cart3' href='#'>
           Add to Cart
         </a>
       </div>
@@ -39,11 +39,10 @@ const Home = (props) => {
         <img src={hoodierage2} alt='Rege Hoodie' />
         <h3>Rage Hoodie</h3>
         <h3>$45.00</h3>
-        <a className='addToCart cart4' href='#'>
+        <a onClick={props.addBasket} className='addToCart cart4' href='#'>
           Add to Cart
         </a>
       </div>
-      <h1>Current Numbers in Cart {}</h1>
     </div>
   );
 };
