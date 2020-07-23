@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
+import { productQuantity } from '../actions/productQuantity';
+
 import ReaperHoodie from '../images/ReaperHoodie.png';
 import LoveHoodie from '../images/LoveHoodie.png';
 import TearsHoodie from '../images/TearsHoodie.png';
 import RageHoodie from '../images/RageHoodie.png';
 
-function Cart({ basketProps }) {
+function Cart({ basketProps, productQuantity }) {
   console.log(basketProps);
 
   let productsInCart = [];
@@ -21,17 +23,16 @@ function Cart({ basketProps }) {
 
   // const productImages = [ReaperHoodie, LoveHoodie, TearsHoodie, RageHoodie];
   const productImages = (product) => {
-    if(product.tagName === 'ReaperHoodie') {
+    if (product.tagName === 'ReaperHoodie') {
       return ReaperHoodie;
-    } else if(product.tagName === 'LoveHoodie') {
+    } else if (product.tagName === 'LoveHoodie') {
       return LoveHoodie;
-    } else if(product.tagName === 'TearsHoodie') {
+    } else if (product.tagName === 'TearsHoodie') {
       return TearsHoodie;
-    } else (product.tagName === 'RageHoodie') {
-      return Ragehoodie;
+    } else if (product.tagName === 'RageHoodie') {
+      return RageHoodie;
     }
-
-  }
+  };
 
   productsInCart = productsInCart.map((product, index) => {
     console.log('My product is');
@@ -49,13 +50,13 @@ function Cart({ basketProps }) {
         <div className='price sm-hide'>${product.price},00</div>
         <div className='quantity'>
           <ion-icon
-            // onClick={() => productQuantity('decrease', product.tagName)}
+            onClick={() => productQuantity('decrease', product.tagName)}
             className='decrease'
             name='arrow-back-circle-outline'
           ></ion-icon>
           <span>{product.numbers}</span>
           <ion-icon
-            // onClick={() => productQuantity('increase', product.tagName)}
+            onClick={() => productQuantity('increase', product.tagName)}
             className='increase'
             name='arrow-forward-circle-outline'
           ></ion-icon>
@@ -76,7 +77,7 @@ function Cart({ basketProps }) {
       <div className='products'>{productsInCart}</div>
       <div className='basketTotalContainer'>
         <h4 className='basketTotalTitle'>Basket Total</h4>
-        <h4 className='basketTotal'>{basketProps.carCost},00</h4>
+        <h4 className='basketTotal'>{basketProps.carCost}.00</h4>
       </div>
     </div>
   );
@@ -86,4 +87,4 @@ const mapStatetoProps = (state) => ({
   basketProps: state.basketState,
 });
 
-export default connect(mapStatetoProps)(Cart);
+export default connect(mapStatetoProps, { productQuantity })(Cart);
