@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import { productQuantity } from '../actions/productQuantity';
+import { productQuantity, clearProduct } from '../actions/productQuantity';
 
 import ReaperHoodie from '../images/ReaperHoodie.png';
 import LoveHoodie from '../images/LoveHoodie.png';
 import TearsHoodie from '../images/TearsHoodie.png';
 import RageHoodie from '../images/RageHoodie.png';
 
-function Cart({ basketProps, productQuantity }) {
+function Cart({ basketProps, productQuantity, clearProduct }) {
   console.log(basketProps);
 
   let productsInCart = [];
@@ -41,7 +41,7 @@ function Cart({ basketProps, productQuantity }) {
       <Fragment key={index}>
         <div className='product'>
           <ion-icon
-            // onClick={() => clearProduct(product.tagName)}
+            onClick={() => clearProduct(product.tagName)}
             name='close-circle'
           ></ion-icon>
           <img src={productImages(product)} />
@@ -87,4 +87,6 @@ const mapStatetoProps = (state) => ({
   basketProps: state.basketState,
 });
 
-export default connect(mapStatetoProps, { productQuantity })(Cart);
+export default connect(mapStatetoProps, { productQuantity, clearProduct })(
+  Cart
+);
