@@ -5,5 +5,10 @@ export const productQuantity = (action, name) => {
     console.log('Inside product Quantity');
     console.log('The action is ', action);
     console.log('The action is ', name);
+
+    dispatch({
+      type: action === 'increase' ? INCREASE_QUANTITY : DECREASE_QUANTITY,
+      payload: name,
+    });
   };
 };

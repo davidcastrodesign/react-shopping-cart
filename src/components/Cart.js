@@ -38,7 +38,7 @@ function Cart({ basketProps, productQuantity }) {
     console.log('My product is');
     console.log(product);
     return (
-      <Fragment>
+      <Fragment key={index}>
         <div className='product'>
           <ion-icon
             // onClick={() => clearProduct(product.tagName)}
