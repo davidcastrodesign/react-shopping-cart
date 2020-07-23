@@ -77,9 +77,10 @@ export default (state = intialState, action) => {
       let newCartCost = 0;
       if (productSelected.numbers === 0) {
         productSelected.numbers = 0;
+        newCartCost = state.cartCost;
       } else {
         productSelected.numbers -= 1;
-        newCartCost = state.cartCost - state.products[action.payload];
+        newCartCost = state.cartCost - state.products[action.payload].price;
       }
 
       return {
