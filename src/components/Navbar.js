@@ -11,7 +11,6 @@ function Navbar(props) {
   }, []);
   return (
     <header>
-      <div className='overlay'></div>
       <nav>
         <h2>Shop</h2>
         <ul>
@@ -23,7 +22,7 @@ function Navbar(props) {
           </li>
           <li className='cart'>
             <Link to='/cart'>
-              <ion-icon name='basket-outline'></ion-icon>Cart
+              <ion-icon name='basket'></ion-icon>Cart
               <span>{props.basketProps.basketNumbers}</span>
             </Link>
           </li>
