@@ -6,24 +6,28 @@ const intialState = {
   products: {
     ReaperHoodie: {
       name: 'Reaper Hoodie',
+      tagName: 'ReaperHoodie',
       price: 45.0,
       numbers: 0,
       inCart: false,
     },
     LoveHoodie: {
       name: 'Love Hoodie',
+      tagName: 'LoveHoodie',
       price: 45.0,
       numbers: 0,
       inCart: false,
     },
     TearsHoodie: {
       name: 'Tears Hoodie',
+      tagName: 'TearsHoodie',
       price: 45.0,
       numbers: 0,
       inCart: false,
     },
     RageHoodie: {
       name: 'Rage Hoodie',
+      tagName: 'RageHoodie',
       price: 45.0,
       numbers: 0,
       inCart: false,

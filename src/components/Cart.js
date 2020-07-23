@@ -19,7 +19,19 @@ function Cart({ basketProps }) {
     console.log(productsInCart);
   });
 
-  const productImages = [ReaperHoodie, LoveHoodie, TearsHoodie, RageHoodie];
+  // const productImages = [ReaperHoodie, LoveHoodie, TearsHoodie, RageHoodie];
+  const productImages = (product) => {
+    if(product.tagName === 'ReaperHoodie') {
+      return ReaperHoodie;
+    } else if(product.tagName === 'LoveHoodie') {
+      return LoveHoodie;
+    } else if(product.tagName === 'TearsHoodie') {
+      return TearsHoodie;
+    } else (product.tagName === 'RageHoodie') {
+      return Ragehoodie;
+    }
+
+  }
 
   productsInCart = productsInCart.map((product, index) => {
     console.log('My product is');
